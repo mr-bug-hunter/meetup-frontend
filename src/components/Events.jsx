@@ -9,8 +9,11 @@ const Event = ({ searchTitle})=>{
     const {data, loading, error} = useFetch("https://meetup-backend-two-beta.vercel.app/meetup")
     
     const [eventsType, setEventType] = useState("All")
-    
 
+    if(loading){
+        return <h2>Loading... Please wait</h2>
+    }
+    
     const filteredEvents = data?.readMeet?.filter((event)=>{
         const drop = eventsType === "All" ||
      event.eventType === eventsType
@@ -19,7 +22,7 @@ const Event = ({ searchTitle})=>{
      event.title.toLowerCase().includes(searchTitle.toLowerCase())
 
      return drop && meetSearch
-    })
+    }) 
     
     
     
@@ -63,9 +66,9 @@ const Event = ({ searchTitle})=>{
                     </div>
                 </section>
                 
-            </div>
+            </div> 
         </div>
-        </div>
+        </div> 
     )
 }
 
