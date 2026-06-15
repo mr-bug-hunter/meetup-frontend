@@ -35,7 +35,7 @@ const EventPages = () => {
                 <h2><strong>Event Tags:</strong></h2>
                 <button className="btn btn-secondary">{meet?.eventTags?.[0]}</button> <span></span>
                 <button className="btn btn-secondary">{meet?.eventTags?.[1]}</button>
-                
+                <br /> <br />
                 </div>
                 
 

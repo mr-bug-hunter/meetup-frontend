@@ -23,7 +23,7 @@ const Event = ({ searchTitle})=>{
     
     
     
-    // console.log(eventsType)
+    
     return(
         <div className="bg-light">
         <div className="container">
@@ -33,7 +33,8 @@ const Event = ({ searchTitle})=>{
                     <h2> <strong>Meetup Events</strong> </h2>
                     
                 
-                <select className="form-select w-25 rounded-5 rounded-top-0"
+                <select className="form-select"
+                style={{maxWidth: "200px"}}
                 value={eventsType} onChange={(e)=> setEventType(e.target.value)}
                 >
                     <option value="All">Select Event Type</option>
@@ -42,18 +43,23 @@ const Event = ({ searchTitle})=>{
                 </select>
                 </div>
                 <section className="mt-4">
-                    <div className="row">
-                    {filteredEvents?.map((events)=>(
+                    <div className="row g-3">
+                    {filteredEvents?.map((events)=>{
+                            console.log(events.timing)
+                        return(
+                        
                         <div key={events._id} className="col-md-4">
                             <div className="position-relative">
                             <img src={events.img} className="img-fluid rounded" alt="" />
                             <div className="position-absolute top-0 start-0 m-2 bg-light py-2 p-2 rounded">{events.eventType}</div> 
                             </div>
                          <a>{events.timing}</a>
-                         <h2><Link to={`/EventsPage/${events._id}`} className="text-decoration-none text-dark">{events.title}</Link></h2> 
+                         <h2><Link to={`/EventsPage/${events._id}`} className="text-decoration-none text-dark"><strong>{events.title}</strong></Link></h2> 
                          
-                        </div>
-                    ))}
+                        
+                        </div>)
+                        
+})}
                     </div>
                 </section>
                 
