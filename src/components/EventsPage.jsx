@@ -16,7 +16,7 @@ const EventPages = () => {
                 <Header/>
              <div className="row">
 
-            <div className="col-md-7">
+            <div className="col-md-5 p-3">
                 <h1>{meet?.title}</h1>
 
                     <p>Hosted By:</p>
@@ -38,12 +38,12 @@ const EventPages = () => {
                 <br /> <br />
                 </div>
                 
-
-                <div className="col-md-5 p-3 shadow rounded">
+                <div className="col-md-5 p-3">
+                <div className="p-3 shadows rounded bg-white">
                     <p>🕐{meet?.timing}</p>
                     <p>📍{meet?.marketingAddress}</p>
                     <p>₹ {meet?.price}</p>
-                
+                </div>
                     <h3 className="mt-4"><strong>Speakers: </strong>({meet?.speakers?.length})</h3>
                     
                     <div className="row align-items-start">
@@ -60,10 +60,10 @@ const EventPages = () => {
                             </div>
                         ))}
                     </div>
-                
+                </div>
                     
                  {/* <button className="btn btn-danger d-block mx-auto w-50 mt-3">RSVP</button> */}
-                </div>
+                
             </div>
         </div>
     )
