@@ -19,8 +19,8 @@ const Event = ({ searchTitle})=>{
      event.eventType === eventsType
 
      const meetSearch = 
-     event.title.toLowerCase().includes(searchTitle.toLowerCase())
-
+     `${event.title} ${event.eventTags.join(" ")}`
+     .toLowerCase().includes(searchTitle.toLowerCase())
      return drop && meetSearch
     }) 
     

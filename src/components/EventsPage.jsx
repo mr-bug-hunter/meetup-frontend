@@ -39,7 +39,7 @@ const EventPages = () => {
                 </div>
                 
 
-                <div className="col-md-5 bg-white p-3 shadow rounded">
+                <div className="col-md-5 p-3 shadow rounded">
                     <p>🕐{meet?.timing}</p>
                     <p>📍{meet?.marketingAddress}</p>
                     <p>₹ {meet?.price}</p>
@@ -62,7 +62,7 @@ const EventPages = () => {
                     </div>
                 
                     
-                 <button className="btn btn-danger d-block mx-auto w-50 mt-3">RSVP</button>
+                 {/* <button className="btn btn-danger d-block mx-auto w-50 mt-3">RSVP</button> */}
                 </div>
             </div>
         </div>
