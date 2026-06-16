@@ -16,7 +16,7 @@ const EventPages = () => {
                 <Header/>
              <div className="row">
 
-            <div className="col-md-5 p-3">
+            <div className="col-md-7 p-3">
                 <h1>{meet?.title}</h1>
 
                     <p>Hosted By:</p>
