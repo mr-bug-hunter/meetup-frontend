@@ -32,8 +32,8 @@ const Event = ({ searchTitle})=>{
             <div className="mt-4">
                 
                
-                <div className="d-flex justify-content-between align-items-center ">
-                    <h2> Meetup Events </h2>
+                <div className="d-flex justify-content-between align-items-center">
+                    <h2 className="py-3"> <strong>Meetup Events</strong>  </h2>
                     
                 
                 <select className="form-select"
@@ -64,9 +64,6 @@ const Event = ({ searchTitle})=>{
                          
                          <h2 className="mt-0"><Link to={`/EventsPage/${events._id}`}
                          className="text-decoration-none text-dark">{events.title}</Link></h2>  
-                          
-                          
-                         
                         </div>)
                         
 })}
@@ -74,9 +71,11 @@ const Event = ({ searchTitle})=>{
                 </section>
                 
             </div> 
-            <Footer/>
+            <div className="py-3">
+                <Footer/>
+            </div>
+            
         </div>
-        
         </div> 
         
     )
