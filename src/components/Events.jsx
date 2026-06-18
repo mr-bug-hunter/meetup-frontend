@@ -1,6 +1,7 @@
 import { useState } from "react"
 import useFetch from "../useFetch"
 import EventPages from "./EventsPage"
+import Footer from "./Footer"
 import {Link} from "react-router-dom"
 
 
@@ -25,12 +26,11 @@ const Event = ({ searchTitle})=>{
     }) 
     
     
-    
-    
     return(
         <div className="bg-light">
         <div className="container">
             <div className="mt-4">
+                
                
                 <div className="d-flex justify-content-between align-items-center ">
                     <h2> <strong>Meetup Events</strong> </h2>
@@ -48,7 +48,9 @@ const Event = ({ searchTitle})=>{
                 <section className="mt-4">
                     <div className="row g-3">
                     {filteredEvents?.map((events)=>{
-                            console.log(events.timing)
+                            
+                            const [start, end] = events.timing.split(" to ")
+
                         return(
                         
                         <div key={events._id} className="col-md-4">
@@ -56,10 +58,10 @@ const Event = ({ searchTitle})=>{
                             <img src={events.img} className="img-fluid rounded" alt="" />
                             <div className="position-absolute top-0 start-0 m-2 bg-light py-2 p-2 rounded">{events.eventType}</div> 
                             </div>
-                         <a>{events.timing}</a>
+                         <p>{start.replace(" at ", "  ")} - {end.split(" at ")[1]}</p>
+                         
                          <h2><Link to={`/EventsPage/${events._id}`} className="text-decoration-none text-dark"><strong>{events.title}</strong></Link></h2> 
                          
-                        
                         </div>)
                         
 })}
@@ -67,8 +69,11 @@ const Event = ({ searchTitle})=>{
                 </section>
                 
             </div> 
+            <Footer/>
         </div>
+        
         </div> 
+        
     )
 }
 

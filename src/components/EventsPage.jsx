@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import useFetch from "../useFetch"
 import Header from "./Header"
+import Footer from "./Footer"
 
 const EventPages = () => {
     const eventsId = useParams()
@@ -55,7 +56,6 @@ const EventPages = () => {
                                     width="80"
                                     height="80" />
                                     <h6><strong>{speaker.name}</strong></h6>
-                                    
                                 </div>
                             </div>
                         ))}
@@ -63,7 +63,7 @@ const EventPages = () => {
                 </div>
                     
                  {/* <button className="btn btn-danger d-block mx-auto w-50 mt-3">RSVP</button> */}
-                
+                <Footer/>
             </div>
         </div>
     )

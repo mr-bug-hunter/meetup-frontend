@@ -2,6 +2,7 @@ import {Link} from "react-router-dom"
 
 const Header = ({searchTitle, setSearchTitle})=>{
     
+    
     return (
         <div>
             <nav className="navbar bg-body-tertiary">
