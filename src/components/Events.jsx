@@ -33,7 +33,7 @@ const Event = ({ searchTitle})=>{
                 
                
                 <div className="d-flex justify-content-between align-items-center ">
-                    <h2> <strong>Meetup Events</strong> </h2>
+                    <h2> Meetup Events </h2>
                     
                 
                 <select className="form-select"
@@ -58,9 +58,14 @@ const Event = ({ searchTitle})=>{
                             <img src={events.img} className="img-fluid rounded" alt="" />
                             <div className="position-absolute top-0 start-0 m-2 bg-light py-2 p-2 rounded">{events.eventType}</div> 
                             </div>
-                         <p>{start.replace(" at ", "  ")} - {end.split(" at ")[1]}</p>
+
+                            
+                              <p>{start.replace(" at ", "  ")} - {end.split(" at ")[1]}</p>
                          
-                         <h2><Link to={`/EventsPage/${events._id}`} className="text-decoration-none text-dark"><strong>{events.title}</strong></Link></h2> 
+                         <h2 className="mt-0"><Link to={`/EventsPage/${events._id}`}
+                         className="text-decoration-none text-dark">{events.title}</Link></h2>  
+                          
+                          
                          
                         </div>)
                         
