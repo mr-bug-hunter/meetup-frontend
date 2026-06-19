@@ -60,10 +60,10 @@ const Event = ({ searchTitle})=>{
                             </div>
 
                             
-                              <p>{start.replace(" at ", "  ")} - {end.split(" at ")[1]}</p>
+                              <p className="mb-1">{start.replace(" at ", "  ")} - {end.split(" at ")[1]}</p>
                          
-                         <h2 className="mt-0"><Link to={`/EventsPage/${events._id}`}
-                         className="text-decoration-none text-dark">{events.title}</Link></h2>  
+                         <h4 className="mt-0"><Link to={`/EventsPage/${events._id}`}
+                         className="text-decoration-none text-dark"> <strong>{events.title}</strong> </Link></h4>  
                         </div>)
                         
 })}
